@@ -15,7 +15,7 @@ mongoose
     .then(() => {
         console.log('Successfully connected to the database');
     })
-    .catch(err => {
+    .catch((err) => {
         console.log('Could not connect to the database. Exiting now...', err);
         process.exit();
     });
@@ -34,7 +34,7 @@ app.get('/hello', (req, res) => {
     res.json({ message: 'Hey hello!' });
 });
 
-require('./routes/route.routes.js')(app);
+require('./routes/coctel.routes.js')(app);
 
 app.listen(22001, () => {
     console.log('Listening at :22001...');
